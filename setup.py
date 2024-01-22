@@ -17,7 +17,7 @@ with open(version_file) as vf:
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Package meta-data.
-NAME = 'aim'
+NAME = 'aim-client'
 DESCRIPTION = 'A super-easy way to record, search and compare AI experiments.'
 VERSION = __version__
 REQUIRES_PYTHON = '>=3.7.0'
@@ -50,8 +50,8 @@ SETUP_REQUIRED = [
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    f'aim-ui=={__version__}',
-    'aimrecords==0.0.7',
+    # f'aim-ui=={__version__}',
+    # 'aimrecords==0.0.7',
     'aimrocks==0.4.0',
     'cachetools>=4.0.0',
     'click>=7.0',
@@ -62,12 +62,12 @@ REQUIRED = [
     'RestrictedPython>=5.1',
     'tqdm>=4.20.0',
     'aiofiles>=0.5.0',
-    'alembic<2,>=1.5.0',
-    'fastapi<1,>=0.69.0',
+    # 'alembic<2,>=1.5.0',
+    # 'fastapi<1,>=0.69.0',
     'jinja2<4,>=2.10.0',
     'pytz>=2019.1',
     'SQLAlchemy>=1.4.1',
-    'uvicorn<1,>=0.12.0',
+    # 'uvicorn<1,>=0.12.0',
     'Pillow>=8.0.0',
     'protobuf<5,>=3.9.2',
     'packaging>=15.0',
@@ -206,13 +206,13 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
     ext_modules=cytonize_extensions(),
-    entry_points={
-        'console_scripts': [
-            'aim=aim.cli.cli:cli_entry_point',
-            'aim-watcher=aim.cli.watcher_cli:cli_entry_point',
-        ],
-    },
-    cmdclass={
-        'upload': UploadCommand
-    }
+    # entry_points={
+    #     'console_scripts': [
+    #         'aim=aim.cli.cli:cli_entry_point',
+    #         'aim-watcher=aim.cli.watcher_cli:cli_entry_point',
+    #     ],
+    # },
+    # cmdclass={
+    #     'upload': UploadCommand
+    # }
 )
